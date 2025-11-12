@@ -6,5 +6,16 @@
 
 #Author:Jsoriano
 
+def calcular_salario(sal_base,sub_anual,sub_trienio,num_anos):
+    return  sal_base+(num_anos*sub_anual)+((num_anos//3)*sub_trienio)
+
+def calcular_salario_puesto(puesto,num_anos):
+    if puesto=="informatica":
+        print(calcular_salario(1500,22,120,num_anos))
+    elif puesto=="rrhh":
+        print(calcular_salario(1200,12,100,num_anos))
+    elif puesto=="ventas":
+        print(calcular_salario(1000,10,27,num_anos))
 
 
+calcular_salario_puesto("informatica",8)
