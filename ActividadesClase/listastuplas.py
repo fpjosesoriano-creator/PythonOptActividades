@@ -56,4 +56,12 @@ print(frutas)
 frutas.pop(2) # Elimina la fruta de la posción 2
 print(frutas)
 
+#convertir de string a lista
+var3="hola"
+var3=list(var3)
+print(var3)
+#convertir una lista a string
+var4=['h','o','l','a']
+var4="".join(var4)
+print(var4)
 
