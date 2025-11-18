@@ -7,4 +7,4 @@ def is_empty(lista):
     else:
         return False
     
-print(is_empty(['1']))
+print(is_empty([]))

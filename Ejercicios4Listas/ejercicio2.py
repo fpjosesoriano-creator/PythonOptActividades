@@ -4,8 +4,6 @@
 # Puedes suponer que febrero tendrá 28 para simplificar.
 #Author:Jsoriano
 
-
-
 def calcular_dias(mes):
     meses_31 = ("enero", "marzo", "mayo", "julio", "agosto", "octubre", "diciembre")
     meses_30 = ("abril", "junio", "septiembre", "noviembre")
