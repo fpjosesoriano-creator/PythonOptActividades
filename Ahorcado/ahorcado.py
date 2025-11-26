@@ -65,11 +65,12 @@ def crea_buffer(palabra_secreta):
 def main():
     palabra_secreta=get_palabra_secreta()
     crea_buffer(palabra_secreta)
+    print("****************BIENVENIDO AL AHORCADO****************")
     print(BUFFER)
     intentos=0
     while True:
         if "".join(BUFFER) != palabra_secreta:
-            letra_adivinar=input("Introduce letra: ")
+            letra_adivinar=input("Introduce letra: ").lower()
             if letra_adivinar in BUFFER or letra_adivinar not in palabra_secreta:
                 intentos+=1
                 print(print_horca(intentos))
