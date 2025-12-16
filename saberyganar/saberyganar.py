@@ -68,19 +68,24 @@ def premios(contador):
 
 random.shuffle(preguntas)
 contador_respuestas=0
-for indice,pregunta in enumerate(preguntas):
-    print(f"Llevas {contador_respuestas} acertadas")
-    if len(pregunta)>0:
-        print(pregunta['pregunta'])
-        if len(pregunta['respuestas'])>0:
-            for respuesta in enumerate(pregunta['respuestas']):
-                print(f"{respuesta}")
-            respuesta=int(input("Introduce respuesta: "))
-        if respuesta==pregunta['correcta'] and respuesta<=len(pregunta['respuestas']):
-            print(f'Correcto la respuesta correcta es {pregunta['respuestas'][pregunta['correcta']]}')
-            contador_respuestas+=1
-        else:
-            print('Incorrecta! vaya...')
+try:
+    for indice,pregunta in enumerate(preguntas):
+        print(f"Llevas {contador_respuestas} acertadas")
+        if len(pregunta)>0:
+            print(pregunta['pregunta'])
+            if len(pregunta['respuestas'])>0:
+                for respuesta in enumerate(pregunta['respuestas']):
+                    print(f"{respuesta}")
+                respuesta=int(input("Introduce respuesta: "))
+            if respuesta==pregunta['correcta'] and respuesta<=len(pregunta['respuestas']):
+                print(f'Correcto la respuesta correcta es {pregunta['respuestas'][pregunta['correcta']]}')
+                contador_respuestas+=1
+            else:
+                print('Incorrecta! vaya...')
+except ValueError:
+    print("Error el valor introducido debe ser el numero de la respuesta")
+except IndexError:
+    print("Vaya parece que hubo un error interno en el formulario...")
 premios(contador_respuestas)
 
 
