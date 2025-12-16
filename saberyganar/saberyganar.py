@@ -54,14 +54,16 @@ preguntas = [
 ]
 
 def premios(contador):
-    if contador>=4:
+    if contador>=4 and contador<7:
         print (f"Enhorabuena has ganado 500€")
-    elif contador>=7:
+    elif contador>=7 and contador<9:
         print (f"Enhorabuena has ganado 1000€")
     elif contador==9:
         print (f"Enhorabuena has ganado 2000€")
     elif contador==10:
         print (f"Enhorabuena has ganado 5000€ ")
+    else:
+        print("Te vas sin un euro :))")
         
 
 random.shuffle(preguntas)
@@ -74,7 +76,7 @@ for indice,pregunta in enumerate(preguntas):
             for respuesta in enumerate(pregunta['respuestas']):
                 print(f"{respuesta}")
             respuesta=int(input("Introduce respuesta: "))
-        if respuesta==pregunta['correcta']:
+        if respuesta==pregunta['correcta'] and respuesta<=len(pregunta['respuestas']):
             print(f'Correcto la respuesta correcta es {pregunta['respuestas'][pregunta['correcta']]}')
             contador_respuestas+=1
         else:
